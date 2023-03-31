@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h1>Pengunjung Perpus</h1>
+  <h1 class="text-center"><center>PENGUNJUNG PERPUSTAKAAN</center></h1>
   <hr>
   <slot />
   </div>

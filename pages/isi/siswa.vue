@@ -6,23 +6,25 @@
         <input
         v-model="nama" 
         placeholder="nama" 
-        class="form-control"
-        /> 
+        >
         <br/>
-        <input
-        v-model="jabatan" 
-        placeholder="jabatan" 
-        class="form-control"
-        />
-        <br />
         <input 
-        v-model="keperluan"
-        placeholder="keperluan" 
-        class="form-control"
+        v-model="kelas" 
+        placeholder="kelas" 
         />
         <br/>
-        <button type="submit" class="btn btn-info text-white me-3">Kirim</button>
-        <NuxtLink to="/pengunjung/guru" class="btn btn-dark text-decoraton-none text-light">Kembali</NuxtLink>
+        <input 
+        v-model="jurusan" 
+        placeholder="jurusan" 
+        />
+        <br/>
+        <input 
+        v-model="keperluan" 
+        placeholder="keperluan" 
+        />
+        <br/>
+        <button type="submit">Kirim</button>
+        <NuxtLink to="/pengunjung/siswa">Kembali</NuxtLink>
       </form>
     </div>
   </div>
@@ -31,15 +33,17 @@
 <script setup>
 const supabase = useSupabaseClient();
 const nama = ref();
-const jabatan = ref();
+const kelas = ref();
+const jurusan = ref();
 const keperluan = ref();
 async function simpan() {
-  await supabase.from("pengunjungguru").insert({
+  await supabase.from("pengunjungsiswa").insert({
     nama: nama.value,
-    jabatan: jabatan.value,
+    kelas: kelas.value,
+    jurusan: jurusan.value,
     keperluan: keperluan.value,
   });
   const router = useRouter();
-  router.push("/pengunjung/guru");
+  router.push("/pengunjung/siswa");
 }
 </script>

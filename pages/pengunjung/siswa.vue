@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>Data Pengunjung Perpus</h1>
-    <NuxtLink to="/isi/siswa">Isi siswa</NuxtLink>
-    <NuxtLink to="/isi/guru">Isi guru</NuxtLink>
-    <table border="1" width="50%">
+  <div class="container">
+    <h2 class="text-center"><center>Data Pengunjung Perpus</center></h2>
+    <NuxtLink to="/isi/siswa" class="btn btn-primary text-decoration-none nb-3">Isi siswa</NuxtLink> <br/>
+    <NuxtLink to="/isi/guru" class="btn btn-primary text-decoration-none nb-3">Isi guru</NuxtLink> <br/>
+    <table border="1" width="100%" class="table bg-dark text-light">
       <thead>
         <tr>
           <th>#</th>
@@ -39,3 +39,12 @@ onMounted(() => {
   getData();
 });
 </script>
+
+<style scoped>
+thead {
+  background-color: rgb(128, 125, 122);
+}
+tbody {
+  background-color: rgb(231, 231, 231) ;
+}
+</style>
