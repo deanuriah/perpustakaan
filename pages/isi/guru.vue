@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="col-md-6 m-auto p-3">
-      <h1 class="text-center"><center>Isi Data Pengunjung Perpus</center></h1>
+      <h1 class="container"><center>Isi Data Pengunjung Perpus</center></h1>
       <form @submit.prevent="simpan()">
         <input v-model="nama" placeholder="nama" class="input w-full max-w-xs" />
         <br />

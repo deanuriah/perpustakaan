@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <h2 class="text-center"><center>Data Pengunjung Perpus</center></h2>
-    <NuxtLink to="/isi/siswa" class="btn btn-primary text-decoration-none nb-3">Isi siswa</NuxtLink> <br/>
-    <NuxtLink to="/isi/guru" class="btn btn-primary text-decoration-none nb-3">Isi guru</NuxtLink> <br/>
+    <NuxtLink to="/isi/siswa" class="btn btn-info text-white me-3">Isi siswa</NuxtLink> 
+    <NuxtLink to="/isi/guru"  class="btn btn-primary text-decoration-none nb-3">Isi guru</NuxtLink> 
     <table border="1" width="100%" class="table bg-dark text-light">
       <thead>
         <tr>
